@@ -25,8 +25,25 @@ class Elevator {
   _passengersEnter() { }
 
   _passengersLeave() { }
-  floorUp() { }
-  floorDown() { }
+
+  floorUp() {
+    if (this.floor < 10){
+      this.floor = this.floor+1;
+    }
+    else{
+      console.log("no vayas al cielo aun...");
+    }
+  }
+
+  floorDown() {
+    if (this.floor > 0){
+      this.floor = this.floor-1;
+    }
+    else{
+      console.log("no puedes ir al inframundo!");
+    }
+  }
+
   call() { }
   log() {
     console.log(`Direction: ${this.direction} | Floor: ${this.floor}`);
