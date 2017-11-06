@@ -16,3 +16,8 @@ elevator.log();
 
 elevator.floorDown();
 elevator.log();
+
+let person = new Person("Rocío",0,4);
+elevator.call(person);
+
+console.log(elevator);

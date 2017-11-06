@@ -44,7 +44,10 @@ class Elevator {
     }
   }
 
-  call() { }
+  call(person) {
+    this.requests.push(person);
+  }
+
   log() {
     console.log(`Direction: ${this.direction} | Floor: ${this.floor}`);
   }
