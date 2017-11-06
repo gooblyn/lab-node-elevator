@@ -11,7 +11,11 @@ class Elevator {
   }
 
   stop(id) {
-    setTimeout(() => {clearInterval(id);},10000);
+    setTimeout(() => {
+      if (this.requests.length === 0) {
+        clearInterval(id);
+      }
+    });
   }
 
   update() {
